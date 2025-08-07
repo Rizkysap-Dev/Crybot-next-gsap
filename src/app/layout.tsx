@@ -1,6 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Rajdhani, Quantico } from "next/font/google";
 import "./globals.css";
+
+const rajdhani = Rajdhani({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-rajdhani",
+});
+
+// Quantico (untuk subheading atau body)
+const quantico = Quantico({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-quantico",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,8 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+        className={`${geistSans.variable} ${geistMono.variable} antialiased ${rajdhani.variable} ${quantico.variable}`}>
         {children}
       </body>
     </html>
