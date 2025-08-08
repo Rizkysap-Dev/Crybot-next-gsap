@@ -56,10 +56,10 @@ body {
 h1,
 .h1 {
   font-family: var(--font-heading);
-  font-size: 14rem;
-  line-height: 0.8;
-  letter-spacing: -16px;
-  word-spacing: 58px;
+  font-size: 10rem;
+  line-height: 0.9;
+  letter-spacing: 0.7px;
+  word-spacing: 50px;
   font-weight: 300;
   color: var(--primary-200);
   text-transform: uppercase;
@@ -276,4 +276,68 @@ h6,
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: inset -2px -2px 2px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(2px);
+}
+
+@media screen and (max-width: 1024px) {
+  h1,
+  .h1 {
+    font-size: 6rem;
+    line-height: 0.8;
+    letter-spacing: -1px;
+    word-spacing: 30px;
+  }
+
+  .h3 {
+    font-size: 1.9rem; /* 30px */
+    line-height: 0.7;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+
+  h5,
+  .h5 {
+    font-size: 1.7rem; /* 20px */
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .h7 {
+    font-size: 1.6rem;
+    line-height: 0.9;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* HP (maksimal 768px) */
+@media screen and (max-width: 568px) {
+  h1,
+  .h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    word-spacing: 20px;
+  }
+
+  .h3 {
+    font-size: 1.4rem;
+    line-height: 0.7;
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+    letter-spacing: -0.02em;
+  }
+
+  h5,
+  .h5 {
+    font-size: 1rem; /* 20px */
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .h7 {
+    font-size: 0.9rem;
+    line-height: 0.9;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
 }

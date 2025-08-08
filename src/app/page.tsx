@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="h-screen relative">
+    <main className="h-[102vh] relative overflow-hidden">
       <div className="h-full w-full">
         <Navbar />
         <Container>
@@ -19,7 +19,7 @@ export default function Home() {
         </Container>
       </div>
       <div>
-        <div className="absolute bottom-2 z-50 left-0">
+        <div className="absolute bottom-6 z-50 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0">
           <Container>
             <div className="flex justify-start items-center">
               <CardGlass className="p-2 w-[320px]">
@@ -49,7 +49,7 @@ export default function Home() {
             </div>
           </Container>
         </div>
-        <div className="absolute bottom-18 right-0 z-50">
+        <div className="hidden md:block absolute bottom-20 right-0 z-50">
           <Container className="flex flex-col justify-center items-center">
             <span className="text-lg line-height-heading">Home</span>
             <p className="text-xl font-heading line-height-heading">
@@ -60,7 +60,7 @@ export default function Home() {
       </div>
       {/* mockup */}
       <Mockup />
-      <div className="h-full w-full overflow-hidden absolute top-0 left-0 z-10">
+      <div className="h-[100%] w-full overflow-hidden absolute top-0 left-0 z-10">
         <SplineRobot />
       </div>
     </main>

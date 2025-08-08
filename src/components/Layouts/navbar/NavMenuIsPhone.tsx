@@ -1,8 +1,8 @@
-"use client";
-
-import React from "react";
+import CardGlass from "@/components/ui/CardGlass";
 import UnderlineHover from "@/components/ui/UnderlineHover";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
+import React from "react";
 
 const NavMenuItems = [
   {
@@ -22,13 +22,13 @@ const NavMenuItems = [
   },
 ];
 
-const NavMenu = () => {
+const NavMenuIsPhone = () => {
   const params = usePathname();
 
   return (
-    <div className="w-screen relative">
-      <div className="absolute w-full top-0 left-0 flex flex-col justify-start z-40">
-        <div className="flex justify-start items-center space-x-2 md:space-x-10">
+    <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full md:w-[90%] lg:w-full  px-2 pt-2 z-[100]">
+      <CardGlass className="flex justify-center items-center">
+        <div className="flex justify-center items-center space-x-5">
           {NavMenuItems.map((item) => (
             <UnderlineHover
               key={item.id}
@@ -38,17 +38,9 @@ const NavMenu = () => {
             </UnderlineHover>
           ))}
         </div>
-      </div>
-      <div className="w-[35%] hidden pr-10 absolute top-0 right-0 md:flex flex-col justify-start">
-        <div className="h4">
-          <h4>
-            Understand crypto like never before — guided by an AI specialist
-            trained to simplify blockchain, bitcoin, and DeFi.
-          </h4>
-        </div>
-      </div>
+      </CardGlass>
     </div>
   );
 };
 
-export default NavMenu;
+export default NavMenuIsPhone;

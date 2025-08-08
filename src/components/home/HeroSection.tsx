@@ -2,12 +2,15 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import useIsPhoneBreakpoint from "@/hooks/useIsPhoneBreakpoint";
 
 const HeroSection = () => {
   const leftRef = useRef<HTMLDivElement>(null);
   const rightRef = useRef<HTMLDivElement>(null);
   const descriptionRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
+
+  const isPhone = useIsPhoneBreakpoint();
 
   const description =
     "An advanced AI robotic instructor built to help you explore and understand the complex world of digital currency with ease.";
@@ -72,18 +75,20 @@ const HeroSection = () => {
 
   return (
     <div className="relative">
-      <div className="grid grid-cols-4">
+      <div>
         {/* KIRI */}
         <div
           ref={leftRef}
-          className={`absolute z-40 top-0 left-0 w-[30%] ${
+          className={`absolute z-40 top-0 left-0 w-[50%] md:w-[30%] ${
             mounted ? "opacity-0 invisible" : ""
           }`}>
-          <div className="h3">Crybot Pro is</div>
+          {/* Judul */}
+          <div className="h3 leading-none m-0 p-0">Crybot Pro is</div>
 
+          {/* Deskripsi */}
           <div
             ref={descriptionRef}
-            className="max-h-[29px] h7 overflow-hidden hover:max-h-[500px] transition-[max-height] duration-700 ease-in-out cursor-pointer"
+            className="md:max-h-[24px] lg:max-h-[28px] max-h-[15px] h7 leading-none m-0 p-0 overflow-hidden hover:max-h-[500px] transition-[max-height] duration-700 ease-in-out cursor-pointer"
             onMouseEnter={handleHover}
             onMouseLeave={handleMouseLeave}>
             {words.map((word, index) => (
@@ -91,9 +96,9 @@ const HeroSection = () => {
                 key={index}
                 style={{
                   display: "inline-block",
-                  marginRight: "4px",
+                  marginRight: "6px", // kalau mau rapat hapus ini
                   opacity: 0.3,
-                  transform: "translateY(5px)",
+                  transform: isPhone ? "translateY(0px)" : "translateY(3px)",
                   transition: "transform 0.3s ease, opacity 0.3s ease",
                 }}>
                 {word}
@@ -105,10 +110,10 @@ const HeroSection = () => {
         {/* KANAN */}
         <div
           ref={rightRef}
-          className={`absolute top-0 right-0 pl-50 pt-14 flex flex-col justify-end items-center ${
+          className={`absolute top-0 right-0 pl-1 md:pl-50 pt-4 md:pt-14 flex flex-col justify-end items-center ${
             mounted ? "opacity-0 invisible" : ""
           }`}>
-          <h3>Current $ to € rate:</h3>
+          <h3 className="md:h3 h5">Current $ to € rate:</h3>
           <h5>0.94 (17.06.2024)</h5>
         </div>
       </div>

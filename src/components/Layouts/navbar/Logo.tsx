@@ -1,9 +1,9 @@
 import React from "react";
 
-const Logo = () => {
+const Logo = ({ className }: { className?: string }) => {
   return (
-    <div className="flex justify-center items-center">
-      <h1 className="h1">CryBot Pro</h1>
+    <div className={`flex justify-center items-center ${className}`}>
+      <h1 className="h1">CrytoBot Pro</h1>
     </div>
   );
 };

@@ -71,7 +71,7 @@ const Mockup = () => {
   return (
     <div
       ref={mockupRef}
-      className={`absolute top-0 left-0 z-40 h-full w-full flex justify-center items-center transition-opacity duration-500 ${
+      className={`hidden absolute top-0 left-0 z-40 h-full w-full md:flex justify-center items-center transition-opacity duration-500 ${
         hasShown
           ? "visible pointer-events-auto"
           : "invisible pointer-events-none"
