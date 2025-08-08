@@ -19,7 +19,7 @@ export default function Home() {
         </Container>
       </div>
       <div>
-        <div className="absolute bottom-16 md:bottom-6 z-50 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0">
+        <div className="absolute bottom-26 md:bottom-6 z-50 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0">
           <Container>
             <div className="flex justify-start items-center">
               <CardGlass className="p-2 w-[320px]">
