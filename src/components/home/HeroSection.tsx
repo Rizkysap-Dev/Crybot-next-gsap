@@ -88,7 +88,7 @@ const HeroSection = () => {
           {/* Deskripsi */}
           <div
             ref={descriptionRef}
-            className="md:max-h-[24px] lg:max-h-[28px] max-h-[15px] h7 leading-none m-0 p-0 overflow-hidden hover:max-h-[500px] transition-[max-height] duration-700 ease-in-out cursor-pointer"
+            className="md:max-h-[24px] lg:max-h-[28px] max-h-[14px] h7 leading-none m-0 p-0 overflow-hidden hover:max-h-[500px] transition-[max-height] duration-700 ease-in-out cursor-pointer"
             onMouseEnter={handleHover}
             onMouseLeave={handleMouseLeave}>
             {words.map((word, index) => (

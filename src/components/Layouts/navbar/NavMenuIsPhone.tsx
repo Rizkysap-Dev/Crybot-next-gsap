@@ -1,6 +1,5 @@
 import CardGlass from "@/components/ui/CardGlass";
 import UnderlineHover from "@/components/ui/UnderlineHover";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
