@@ -76,7 +76,7 @@ const Mockup = () => {
           ? "visible pointer-events-auto"
           : "invisible pointer-events-none"
       }`}>
-      <div className="w-[25%] h-[80%]">
+      <div className="lg:w-[25%] md:w-[45%] h-[80%]">
         <div className="h-full flex flex-col justify-between items-center border border-white rounded-4xl px-10 py-5 bg-transparent">
           <div className="flex flex-col space-y-10 items-center w-full">
             <div className="h-8 w-[35%] bg-white rounded-full" />
