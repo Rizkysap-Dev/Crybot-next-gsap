@@ -155,6 +155,15 @@ const HeroSection = () => {
                 className="h7 leading-relaxed md:leading-relaxed whitespace-normal break-words m-0 p-0 cursor-pointer"
                 onMouseEnter={handleHover}
                 onMouseLeave={handleMouseLeave}
+                onTouchStart={(e) => {
+                  e.preventDefault();
+                  handleHover();
+                }}
+                onTouchEnd={handleMouseLeave}
+                onTouchCancel={handleMouseLeave}
+                onFocus={handleHover}
+                onBlur={handleMouseLeave}
+                tabIndex={0}
               >
                 {sentences.map((sentence, index) => (
                   <span

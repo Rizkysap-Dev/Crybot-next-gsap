@@ -27,7 +27,15 @@ const UnderlineHover = ({
       onMouseLeave={() => setOpen(false)}
       className="group h-fit w-fit"
     >
-      <Link href={href} className="relative" onClick={() => setOpen(false)}>
+      <Link
+        href={href}
+        className="relative"
+        onClick={() => setOpen(false)}
+        onTouchStart={() => setOpen(true)}
+        onTouchEnd={() => setOpen(false)}
+        onFocus={() => setOpen(true)}
+        onBlur={() => setOpen(false)}
+      >
         <span className="font-medium h6">{children}</span>
         <span
           style={{
