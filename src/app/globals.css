@@ -120,7 +120,7 @@ h6,
   font-size: 1rem; /* 16px */
   line-height: 1.5;
   font-weight: 500;
-  color: var(--accent-100);
+  color: var(--accent-200);
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -278,6 +278,15 @@ h6,
   backdrop-filter: blur(2px);
 }
 
+/* Utility: clamp 1 line tanpa bleed ke baris berikutnya */
+.clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  line-clamp: 1;
+  overflow: hidden;
+}
+
 @media screen and (max-width: 1024px) {
   h1,
   .h1 {
@@ -332,6 +341,14 @@ h6,
     font-size: 1rem; /* 20px */
     font-weight: 500;
     margin-bottom: 0.5rem;
+  }
+
+  .h6 {
+    font-size: 0.8rem; /* 16px */
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 
   .h7 {

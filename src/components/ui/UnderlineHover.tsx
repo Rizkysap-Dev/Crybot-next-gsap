@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const UnderlineHover = ({
   children,
@@ -13,14 +14,21 @@ const UnderlineHover = ({
   params?: boolean;
 }) => {
   const [open, setOpen] = React.useState(false);
+  const pathname = usePathname();
+
+  // Reset underline hover state saat route berubah agar item sebelumnya tidak tetap aktif
+  React.useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   return (
     <div
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
-      className="group h-fit w-fit">
-      <Link href={href} className="relative">
-        <span className="font-medium">{children}</span>
+      className="group h-fit w-fit"
+    >
+      <Link href={href} className="relative" onClick={() => setOpen(false)}>
+        <span className="font-medium h6">{children}</span>
         <span
           style={{
             transform: params ? "scaleX(1)" : open ? "scaleX(1)" : "scaleX(0)",

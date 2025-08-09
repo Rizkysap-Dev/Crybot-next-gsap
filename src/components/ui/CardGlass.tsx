@@ -11,7 +11,7 @@ const CardGlass = ({ children, className }: CardGlassProps) => {
       <div className="liquidGlass-effect"></div>
       <div className="liquidGlass-tint"></div>
       <div className="liquidGlass-shine"></div>
-      <div className="liquidGlass-text">{children}</div>
+      <div className="liquidGlass-text w-full">{children}</div>
     </div>
   );
 };
