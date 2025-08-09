@@ -35,7 +35,7 @@ export default function Home() {
                       width={80}
                       height={80}
                     />
-                    <div className="text-center">
+                    <div className="text-start">
                       <p>HI, I&apos;m CryptoBot Pro</p>
                       <p>I&apos;ll tell you everything about crypto</p>
                     </div>
