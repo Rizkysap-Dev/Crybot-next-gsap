@@ -71,15 +71,16 @@ const Mockup = () => {
   return (
     <div
       ref={mockupRef}
-      className={`hidden absolute top-0 left-0 z-40 h-full w-full md:flex justify-center items-center transition-opacity duration-500 ${
+      className={`hidden absolute inset-x-0 top-6 bottom-6 z-40 w-full md:flex justify-center items-center px-4 sm:px-6 md:px-10 transition-opacity duration-500 ${
         hasShown
           ? "visible pointer-events-auto"
           : "invisible pointer-events-none"
-      }`}>
-      <div className="lg:w-[25%] md:w-[45%] h-[80%]">
-        <div className="h-full flex flex-col justify-between items-center border border-white rounded-4xl px-10 py-5 bg-transparent">
-          <div className="flex flex-col space-y-10 items-center w-full">
-            <div className="h-8 w-[35%] bg-white rounded-full" />
+      }`}
+    >
+      <div className="mx-auto w-[92%] sm:w-[80%] md:w-[55%] lg:w-[38%] xl:w-[32%] 2xl:w-[26%] max-w-[640px]">
+        <div className="aspect-[9/19] w-full flex flex-col justify-between items-center border border-white rounded-4xl px-6 md:px-8 lg:px-10 py-4 md:py-5 bg-transparent">
+          <div className="flex flex-col space-y-8 md:space-y-10 items-center w-full">
+            <div className="h-6 md:h-8 w-[35%] bg-white rounded-full" />
             <div className="flex justify-start items-center w-full space-x-2">
               <Image
                 className="h-10 w-10 rounded-full"
@@ -96,7 +97,8 @@ const Mockup = () => {
           <div className="flex justify-center items-center pb-5 w-full">
             <button
               ref={buttonRef}
-              className="text-[14px] font-semibold bg-white text-black rounded-4xl py-3 w-full opacity-0">
+              className="text-sm md:text-[14px] font-semibold bg-white text-black rounded-4xl py-2.5 md:py-3 w-full opacity-0"
+            >
               Start
             </button>
           </div>
