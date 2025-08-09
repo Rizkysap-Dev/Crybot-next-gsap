@@ -32,6 +32,14 @@ body {
   min-height: 100vh;
 }
 
+/* Fix 100vh on mobile: use h-screen-safe or min-h-screen-safe */
+.h-screen-safe {
+  height: calc(var(--vh, 1vh) * 100);
+}
+.min-h-screen-safe {
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
 .line-height-heading {
   line-height: 0.8;
 }
@@ -164,7 +172,7 @@ h6,
   z-index: 1;
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.258);
 }
 
 .liquidGlass-shine {
@@ -174,8 +182,8 @@ h6,
 
   overflow: hidden;
 
-  box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.5),
-    inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5);
+  box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.255),
+    inset -1px -1px 1px 1px rgba(255, 255, 255, 0.212);
 }
 
 .liquidGlass-text {
@@ -186,19 +194,12 @@ h6,
 
 .menu,
 .menu > div {
-  padding: 0.4rem;
-  border-radius: 1.8rem;
-}
-
-.menu:hover {
-  padding: 0.6rem;
   border-radius: 1.8rem;
 }
 
 .menu > div > div {
   font-size: 14px;
   color: white;
-  padding: 0.4rem 0.6rem;
 }
 
 .liquidGlass-wrapper-card-item {
@@ -318,14 +319,15 @@ h6,
   }
 }
 
-/* HP (maksimal 768px) */
+/* HP (maksimal 568px) */
 @media screen and (max-width: 568px) {
   h1,
   .h1 {
-    font-size: 2.8rem;
-    line-height: 1.2;
-    letter-spacing: 1px;
-    word-spacing: 20px;
+    font-size: 2rem;
+    line-height: 0.9;
+    color: var(--primary-300);
+    letter-spacing: -0.5px;
+    word-spacing: 5px;
   }
 
   .h3 {
@@ -344,7 +346,7 @@ h6,
   }
 
   .h6 {
-    font-size: 0.8rem; /* 16px */
+    font-size: 0.7rem; /* 16px */
     line-height: 1.5;
     margin-bottom: 0.5rem;
     text-transform: uppercase;

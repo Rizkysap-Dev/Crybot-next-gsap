@@ -7,7 +7,10 @@ interface CardGlassProps {
 
 const CardGlass = ({ children, className }: CardGlassProps) => {
   return (
-    <div className={`liquidGlass-wrapper menu ${className}`}>
+    <div
+      className={`liquidGlass-wrapper menu ${className}`}
+      style={{ height: "100%" }}
+    >
       <div className="liquidGlass-effect"></div>
       <div className="liquidGlass-tint"></div>
       <div className="liquidGlass-shine"></div>

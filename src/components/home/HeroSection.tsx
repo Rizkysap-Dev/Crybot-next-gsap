@@ -185,7 +185,7 @@ const HeroSection = () => {
         {/* KANAN */}
         <div
           ref={rightRef}
-          className={`absolute top-0 right-0 pl-1 md:pl-50 pt-4 md:pt-14 flex flex-col justify-end items-center ${
+          className={`absolute top-0 right-0 pl-1 md:pl-50 pt-8 md:pt-14 flex flex-col justify-end items-center ${
             mounted ? "opacity-0 invisible" : ""
           }`}
         >

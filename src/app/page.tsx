@@ -10,13 +10,13 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main
-      className="h-[100vh] relative overflow-hidden bg-cover bg-center bg-no-repeat"
+      className="h-screen-safe relative overflow-hidden bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/50.jpg')" }}
     >
       <div className="h-full w-full">
         <Navbar />
         <Container>
-          <section className="mt-10 z-50">
+          <section className="md:mt-10 mt-35 z-50">
             <HeroSection />
           </section>
         </Container>
@@ -25,15 +25,15 @@ export default function Home() {
         <div className="absolute bottom-5 md:bottom-6 z-50 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0">
           <Container>
             <div className="flex justify-start items-center">
-              <CardGlass className="p-2 w-[320px]">
+              <CardGlass className="p-4 w-[280px]">
                 <div className="flex flex-col items-center space-y-5">
-                  <div className="flex justify-center space-x-2 items-center w-full">
+                  <div className="flex justify-start space-x-2 items-center w-full">
                     <Image
-                      className="h-10 w-10 rounded-full"
+                      className="h-10 w-10 rounded-2xl"
                       src="/photoRobot.png"
                       alt="robot"
-                      width={80}
-                      height={80}
+                      width={100}
+                      height={100}
                     />
                     <div className="text-start">
                       <p>HI, I&apos;m CryptoBot Pro</p>
@@ -64,7 +64,7 @@ export default function Home() {
       </div>
       {/* mockup */}
       <Mockup />
-      <div className="h-[100%] w-full overflow-hidden absolute top-40 md:top-0 left-0 z-10">
+      <div className="h-[100%] w-full overflow-hidden absolute top-55 md:top-0 left-0 z-10">
         <SplineRobot />
       </div>
     </main>

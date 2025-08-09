@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Rajdhani, Quantico } from "next/font/google";
 import "./globals.css";
+import ViewportHeightFix from "@/components/ViewportHeightFix";
 
 const rajdhani = Rajdhani({
   subsets: ["latin"],
@@ -38,7 +39,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased ${rajdhani.variable} ${quantico.variable}`}>
+        className={`${geistSans.variable} ${geistMono.variable} antialiased ${rajdhani.variable} ${quantico.variable}`}
+      >
+        <ViewportHeightFix />
         {children}
       </body>
     </html>
