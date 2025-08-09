@@ -6,6 +6,7 @@ import CardGlass from "@/components/ui/CardGlass";
 import Image from "next/image";
 import Mockup from "@/components/ui/Mockup";
 import Link from "next/link";
+import { FaCircleArrowDown } from "react-icons/fa6";
 
 export default function Home() {
   return (
@@ -53,12 +54,15 @@ export default function Home() {
             </div>
           </Container>
         </div>
-        <div className="hidden md:block absolute bottom-20 right-0 z-50">
+        <div className="hidden md:block absolute bottom-10 right-0 z-50">
           <Container className="flex flex-col justify-center items-center">
             <span className="text-lg line-height-heading">Home</span>
             <p className="text-xl font-heading line-height-heading">
               Scroll to Explore
             </p>
+            <div className="flex justify-center items-center mt-5">
+              <FaCircleArrowDown size={24} />
+            </div>
           </Container>
         </div>
       </div>

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { FaCircleArrowDown } from "react-icons/fa6";
 // hover-based animation; no breakpoint-specific transforms needed
 
 const HeroSection = () => {
