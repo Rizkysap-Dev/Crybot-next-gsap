@@ -27,7 +27,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "crytobot",
+  title: "CrytoBot Pro",
   description:
     "Experience next-level crypto trading with AI automation and stunning 3D animations. Watch real-time market data come alive in interactive 3D charts, dynamic particle effects, and a futuristic dashboard—built to help you trade faster, smarter, and with style.",
 };
